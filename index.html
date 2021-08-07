@@ -7,7 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="variable.css">
+    
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -24,136 +28,129 @@
         <a href="#">ofsp_ce</a>
       </div>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Company</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a class="login-color" href="#">Login</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#company-section">Company</a></li>
+        <li><a href="#pricing-cards">Pricing</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="#home">Login</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- SHOWCASE SECTION -->
   <section id="home">
-    <div class="container">
-      <div class="info">
+    <div class="home-container">
+      <div class="home-info">
         <h1>Online English Learning</h1>
         <p>From finding relevant media contacts to sending eye-catching press releases, Prowly has everything you need
           your PR work done.</p>
-        <button class="btn">Join</button>
+        <button class="btn-primary">Join</button>
       </div>
-      <div class="image">
+      <div class="showcase-image">
         <img src="/image/538.svg" alt="">
       </div>
     </div>
   </section>
 
-
-  <!-- about start -->
-  <section id="about">
+  <!-- Pricing Section -->
+  <section id="pricing-cards">
     <h1>Join These Course</h1>
     <div class="container">
       <div class="card">
         <img src="image/Course 1.jpg" alt="">
-        <h3>English Grammer Course</h3>
+        <h2>English Grammer Course</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
           ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
-        <div class="min">
-          <div class="time">
-            <div class="icon">
+        <div class="card-container">
+          <div class="time-length">
+            <div class="para">
               <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
             </div>
           </div>
-          <div class="dolar">
+          <div class="price">
             <p>$65</p>
           </div>
         </div>
       </div>
 
-
       <div class="card">
         <img src="image/Course 2.jpg" alt="">
-        <h3>Speaking in british accent</h3>
+        <h2>Speaking in british accent</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
           ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
-        <div class="min">
-          <div class="time">
-            <div class="icon">
+        <div class="card-container">
+          <div class="time-length">
+            <div class="para">
               <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
             </div>
           </div>
-          <div class="dolar">
+          <div class="price">
             <p>$100</p>
           </div>
         </div>
       </div>
 
-
       <div class="card">
         <img src="image/Course 3.jpg" alt="">
-        <h3>Class 12th English full course</h3>
+        <h2>Class 12th English full course</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
           ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
-        <div class="min">
-          <div class="time">
-            <div class="icon">
+        <div class="card-container">
+          <div class="time-length">
+            <div class="para">
               <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
             </div>
           </div>
-          <div class="dolar">
+          <div class="price">
             <p>$65</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- about end -->
 
-
-
-  <!-- take satrt -->
-  <section id="take">
+  <!-- Company Section -->
+  <section id="company-section">
     <div class="container">
-      <div class="book">
-        <div class="self">
+      <div class="company-item">
+        <div class="company-info">
           <h1>Take Self Assesment</h1>
           <p>From finding relevant media contacts to sending eye-catching visual press releases, Prowly has
             everything you need your PR work done</p>
         </div>
-        <div class="image-s">
+        <div class="company-image">
           <img src="image/Group 6.svg" alt="">
         </div>
       </div>
 
 
-      <div class="book">
-        <div class="image-s">
+      <div class="company-item">
+        <div class="company-image">
           <img src="image/Group 7.svg" alt="">
         </div>
-        <div class="self">
+        <div class="company-info">
           <h1>Take Writen Text</h1>
           <p>From finding relevant media contacts to sending eye-catching visual press releases, Prowly
             has everything you need your PR work done</p>
         </div>
       </div>
-      <div class="book">
-        <div class="self">
+      <div class="company-item">
+        <div class="company-info">
           <h1>Join Live Class</h1>
           <p>From finding relevant media contacts to sending eye-catching visual press releases,
             Prowly has everything you need your PR work done</p>
         </div>
-        <div class="image-s">
+        <div class="company-image">
           <img src="image/Group 2.svg" alt="">
         </div>
       </div>
   </section>
-  <!-- take end -->
 
-
-  <section id="question">
+  <!-- Contact Section -->
+  <section id="contact-section">
     <div class="container">
-      <div class="box">
-        <h2>Do you Have any questions</h2>
+      <div class="contact-box">
+        <h1>Do you Have any questions</h1>
         <p>Put your email address and get started</p>
         <div class="email-address">
           <div class="input-field">
@@ -161,15 +158,12 @@
             <input type="email" placeholder="Enter email address">
           </div>
           <div class="btn-class">
-            <button class="send">Send</button>
+            <button class="btn-primary">Send</button>
           </div>
-
         </div>
       </div>
     </div>
   </section>
-
-
 
   <!-- FOOTER SECTION -->
   <footer>
@@ -205,7 +199,7 @@
         </div>
         <div class="footer-info">
           <h2>Follow Us</h2>
-          <div class="icons-buttom">
+          <div class="icons-items">
             <div class=" icon-bg">
               <i class="fab fa-facebook-f"></i>
             </div>
@@ -221,25 +215,28 @@
           </div>
           <div class="message">
             <div class="message-text">
-              <p><span><i class="fas fa-comment-dots"></i>&nbsp;</span> Online Consultation</p>
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="paragrah">
+                <p>Online Consultation</p>
+              </div>  
             </div>
           </div>
         </div>
       </div>
 
-
       <div class="footer-buttom">
-        <div class="left-side">
-          <div class="list-item">
+        <div class="list-items">
+          <div class="item">
             <li> <a href="#">Platform</a></li>
           </div>
-          <div class="list-item">
+          <div class="item">
             <li> <a href="#">Products</a></li>
           </div>
-          <div class="list-item">
+          <div class="item">
             <li> <a href="#">Resources</a></li>
           </div>
-
         </div>
         <div class="right-side">
           <p>&copy; 2021 Conneckt.com | All Rights Reserved</p>
@@ -248,5 +245,4 @@
     </div>
   </footer>
 </body>
-
 </html>
