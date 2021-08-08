@@ -1,14 +1,71 @@
+.main-container, body #navbar .container, #home .home-container, #pricing-cards .container, #company-section .container, #footer-section .container, #footer-section .footer-buttom {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo-style, body #navbar .container .logo a, #footer-section .container .footer-logo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #16171a;
+}
+
+.btn-primary, body #navbar .container ul .btn, #home .home-container .home-info .btn, #contact-section .container .contact-box .email-address .btn-class .btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(#314755), color-stop(51%, #7188f9), to(#314755));
+  background-image: linear-gradient(to right, #314755 0%, #7188f9 51%, #314755 100%);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 10px;
+  padding: 17px 45px;
+  text-align: center;
+  background-size: 200% auto;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  outline: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn-primary:hover, body #navbar .container ul .btn:hover, #home .home-container .home-info .btn:hover, #contact-section .container .contact-box .email-address .btn-class .btn:hover {
+  background-position: right center;
+  background-color: #7386e4;
+}
+
+.grid, body #navbar .container, #company-section .container .company-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex, #contact-section .container, #footer-section .container .footer-info .icons-items .icon-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-}
-
-.main-container, body #navbar .container, body #home .home-container, body #pricing-cards .container, body #company-section .container .company-item, body #footer-section .container, body #footer-section .footer-buttom {
-  max-width: 1200px;
-  margin: auto;
 }
 
 a, body #navbar .container ul li a {
@@ -26,54 +83,16 @@ a, body #navbar .container ul li a {
   transition: .3s;
 }
 
-.btn, body #home .home-container .home-info .btn-primary, body #contact-section .container .contact-box .email-address .btn-class .btn-primary {
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  background: #7188f9;
-  border-radius: 10px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.grid, body #navbar .container, body #company-section .container .company-item {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex, body #contact-section .container, body #footer-section .container .footer-info .icons-items .icon-bg, body #footer-section .container .footer-info .message .message-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 body #navbar {
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   background-color: #ffffff;
-  padding: 15px 0 0 0;
 }
 
-body #navbar .container .logo a {
-  font-size: 33px;
-  font-weight: 800;
-  color: #16171a;
+body #navbar .container {
+  padding: 15px 0 15px 15px;
 }
 
 body #navbar .container ul {
@@ -98,17 +117,11 @@ body #navbar .container ul li a:hover {
   color: #16171a;
 }
 
-body #navbar .container ul :nth-child(5) a {
-  color: #7188f9 !important;
-  -webkit-transition: .3s;
-  transition: .3s;
+body #navbar .container ul .btn {
+  padding: 15px 31px;
 }
 
-body #navbar .container ul :nth-child(5) a:hover {
-  color: #7386e4;
-}
-
-body #home .home-container {
+#home .home-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1.3fr;
@@ -120,78 +133,71 @@ body #home .home-container {
   height: 100vh;
 }
 
-body #home .home-container .home-info h1 {
+#home .home-container .home-info h1 {
   color: #16171a;
   font-size: 2.7rem;
   font-weight: 700;
   margin-bottom: 2rem;
 }
 
-body #home .home-container .home-info p {
+#home .home-container .home-info p {
+  margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 2rem;
   color: #4e5259;
 }
 
-body #home .home-container .home-info .btn-primary {
-  padding: 15px 45px;
-  margin-top: 2.5rem;
-}
-
-body #home .home-container .home-info .btn-primary:hover {
-  background: #7386e4;
-}
-
-body #home .home-container .showcase-image img {
+#home .home-container .showcase-image img {
   width: 100%;
 }
 
-body #pricing-cards h1 {
+#pricing-cards h1 {
   color: #16171a;
   font-size: 2.50rem;
   text-align: center;
   margin: 1rem 0 3rem 0;
 }
 
-body #pricing-cards .container {
+#pricing-cards .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  padding: 15px;
 }
 
-body #pricing-cards .container .card {
+#pricing-cards .container .card {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-body #pricing-cards .container .card:hover {
+#pricing-cards .container .card:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-body #pricing-cards .container .card img {
+#pricing-cards .container .card img {
   width: 100%;
 }
 
-body #pricing-cards .container .card h2 {
+#pricing-cards .container .card h2 {
   padding: 25px 20px 10px 20px;
   font-size: 1.2rem;
   color: #16171a;
 }
 
-body #pricing-cards .container .card p {
+#pricing-cards .container .card p {
   padding: 10px 20px 0 20px;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #4e5259;
 }
 
-body #pricing-cards .container .card .card-container {
+#pricing-cards .container .card .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,66 +210,65 @@ body #pricing-cards .container .card .card-container {
   padding: 20px;
 }
 
-body #pricing-cards .container .card .card-container .time-length .para p {
+#pricing-cards .container .card .card-container .time-length .para p {
   padding: 0 !important;
   color: #4e5259;
   font-size: 15px;
 }
 
-body #pricing-cards .container .card .card-container .time-length .para p i {
+#pricing-cards .container .card .card-container .time-length .para p i {
   color: #666666;
   font-size: 1rem;
 }
 
-body #pricing-cards .container .card .card-container .price p {
+#pricing-cards .container .card .card-container .price p {
   padding: 0 !important;
   font-size: 15px;
   font-weight: 800;
   color: #4e5259;
 }
 
-body #company-section {
-  margin-top: 10%;
+#company-section {
+  margin-top: 8%;
 }
 
-body #company-section .container .company-item {
+#company-section .container .company-item {
   grid-gap: 5rem;
-  margin-bottom: 6rem;
 }
 
-body #company-section .container .company-item .company-info h1 {
+#company-section .container .company-item .company-info h1 {
   color: #16171a;
   font-size: 2.2rem;
   margin-bottom: 3rem;
   font-weight: bold;
 }
 
-body #company-section .container .company-item .company-info p {
+#company-section .container .company-item .company-info p {
   color: #4e5259;
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
 
-body #company-section .container .company-item .company-image img {
+#company-section .container .company-item .company-image img {
   width: 100%;
   height: 550px;
 }
 
-body #contact-section {
+#contact-section {
   background: #f4f5f6;
-  margin-bottom: 10rem;
+  margin: 5rem 0 10rem 0;
 }
 
-body #contact-section .container {
+#contact-section .container {
   height: 40vh;
 }
 
-body #contact-section .container .contact-box h1 {
+#contact-section .container .contact-box h1 {
   color: #16171a;
   font-size: 2.4rem;
 }
 
-body #contact-section .container .contact-box p {
+#contact-section .container .contact-box p {
   color: #4e5259;
   font-size: 1.2rem;
   text-align: center;
@@ -271,14 +276,15 @@ body #contact-section .container .contact-box p {
   padding-bottom: 3rem;
 }
 
-body #contact-section .container .contact-box .email-address {
+#contact-section .container .contact-box .email-address {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr auto;
       grid-template-columns: 3fr auto;
+  grid-gap: 15px;
 }
 
-body #contact-section .container .contact-box .email-address .input-field i {
+#contact-section .container .contact-box .email-address .input-field i {
   position: absolute;
   margin-top: 1.2rem;
   font-size: 1rem;
@@ -286,7 +292,7 @@ body #contact-section .container .contact-box .email-address .input-field i {
   color: #c3c3c3;
 }
 
-body #contact-section .container .contact-box .email-address .input-field input {
+#contact-section .container .contact-box .email-address .input-field input {
   width: 100%;
   padding: 20px 55px;
   background: white;
@@ -295,38 +301,27 @@ body #contact-section .container .contact-box .email-address .input-field input 
   outline: none;
 }
 
-body #contact-section .container .contact-box .email-address .input-field input::-webkit-input-placeholder {
+#contact-section .container .contact-box .email-address .input-field input::-webkit-input-placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-body #contact-section .container .contact-box .email-address .input-field input:-ms-input-placeholder {
+#contact-section .container .contact-box .email-address .input-field input:-ms-input-placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-body #contact-section .container .contact-box .email-address .input-field input::-ms-input-placeholder {
+#contact-section .container .contact-box .email-address .input-field input::-ms-input-placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-body #contact-section .container .contact-box .email-address .input-field input::placeholder {
+#contact-section .container .contact-box .email-address .input-field input::placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-body #contact-section .container .contact-box .email-address .btn-class .btn-primary {
-  padding: 19px 43px;
-  font-size: 14px;
-  border-radius: 10px;
-  margin-left: 1.2rem;
-}
-
-body #contact-section .container .contact-box .email-address .btn-class .btn-primary:hover {
-  background-color: #7386e4;
-}
-
-body #footer-section .container {
+#footer-section .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
@@ -336,35 +331,52 @@ body #footer-section .container {
   padding-bottom: 4rem;
 }
 
-body #footer-section .container h1 {
-  color: #16171a;
-  margin-top: 1rem;
+#footer-section .container .footer-logo h1 {
+  margin-bottom: 1.5rem;
 }
 
-body #footer-section .container .footer-info h2 {
+#footer-section .container .footer-logo p {
+  margin-bottom: 1rem;
+  color: #83868b;
+}
+
+#footer-section .container .footer-logo a, #footer-section body #navbar .container .footer-logo ul li a, body #navbar #footer-section .container .footer-logo ul li a, #footer-section body #navbar .container ul li .footer-logo a, body #navbar #footer-section .container ul li .footer-logo a {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#footer-section .container .footer-logo a:hover {
+  color: #000000;
+}
+
+#footer-section .container .footer-logo a i {
+  color: #83868b;
+}
+
+#footer-section .container .footer-info h2 {
   color: #16171a;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
-body #footer-section .container .footer-info li {
+#footer-section .container .footer-info li {
   list-style: none;
   font-size: 1rem;
   margin-bottom: 20px;
 }
 
-body #footer-section .container .footer-info li a {
+#footer-section .container .footer-info li a {
   color: #83868b;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-body #footer-section .container .footer-info li a:hover {
+#footer-section .container .footer-info li a:hover {
   color: #3f3c3c;
   text-decoration: underline;
 }
 
-body #footer-section .container .footer-info .icons-items {
+#footer-section .container .footer-info .icons-items {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -378,7 +390,7 @@ body #footer-section .container .footer-info .icons-items {
           align-items: center;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg {
+#footer-section .container .footer-info .icons-items .icon-bg {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -389,53 +401,31 @@ body #footer-section .container .footer-info .icons-items .icon-bg {
   transition: .3s;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg:hover {
+#footer-section .container .footer-info .icons-items .icon-bg:hover {
   background-color: #eeeeee;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg i {
+#footer-section .container .footer-info .icons-items .icon-bg i {
   font-size: 1.2rem;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg:nth-child(1) {
+#footer-section .container .footer-info .icons-items .icon-bg:nth-child(1) {
   color: #068ad3;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg:nth-child(2) {
+#footer-section .container .footer-info .icons-items .icon-bg:nth-child(2) {
   color: #f34a38;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg:nth-child(3) {
+#footer-section .container .footer-info .icons-items .icon-bg:nth-child(3) {
   color: #55adee;
 }
 
-body #footer-section .container .footer-info .icons-items .icon-bg:nth-child(4) {
+#footer-section .container .footer-info .icons-items .icon-bg:nth-child(4) {
   color: #da1657;
 }
 
-body #footer-section .container .footer-info .message {
-  margin-top: 1.7rem;
-}
-
-body #footer-section .container .footer-info .message .message-text {
-  background-color: #7188f9;
-  border-radius: 15px;
-  text-align: center;
-  padding: 17px 10px 17px 10px;
-}
-
-body #footer-section .container .footer-info .message .message-text .icon i {
-  margin-right: 10px;
-  font-size: 21px;
-  color: #ffffff;
-}
-
-body #footer-section .container .footer-info .message .message-text p {
-  font-size: 15px;
-  color: #ffffff;
-}
-
-body #footer-section .footer-buttom {
+#footer-section .footer-buttom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,21 +438,21 @@ body #footer-section .footer-buttom {
           align-items: center;
 }
 
-body #footer-section .footer-buttom .list-items {
+#footer-section .footer-buttom .list-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body #footer-section .footer-buttom .list-items .item {
+#footer-section .footer-buttom .list-items .item {
   margin-right: 20px;
 }
 
-body #footer-section .footer-buttom .list-items .item:nth-child(3) {
+#footer-section .footer-buttom .list-items .item:nth-child(3) {
   margin-right: 0px;
 }
 
-body #footer-section .footer-buttom .list-items .item li a {
+#footer-section .footer-buttom .list-items .item li a {
   font-size: 0.8rem;
   color: #4e5259;
   -webkit-transition: .3s;
@@ -470,11 +460,12 @@ body #footer-section .footer-buttom .list-items .item li a {
   font-size: 15px;
 }
 
-body #footer-section .footer-buttom .list-items .item li a:hover {
-  color: #000000;
+#footer-section .footer-buttom .list-items .item li a:hover {
+  text-decoration: underline;
+  color: #7188f9;
 }
 
-body #footer-section .footer-buttom .right-side p {
+#footer-section .footer-buttom .right-side p {
   color: #4e5259;
   font-size: 0.9rem;
 }

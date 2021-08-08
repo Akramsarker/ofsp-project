@@ -1,0 +1,48 @@
+@import "variable";
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+  // padding: 0 10px 0 10px;
+}
+.logo-style{
+  font-size: $logo-font-size;
+  font-weight: 800;
+  color: $main-heading-color;
+}
+.btn-primary {
+  background-image: linear-gradient(to right, #314755 0%,  #7188f9  51%, #314755  100%);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 10px;
+  padding: 17px 45px;
+  text-align: center;
+  background-size: 200% auto;
+  color: $primary-color; 
+  cursor: pointer;        
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  outline: none;
+  transition: .4s;
+  &:hover {
+    background-position: right center; 
+    background-color: #7386e4;
+  }
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
