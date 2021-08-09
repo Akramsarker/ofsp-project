@@ -10,8 +10,8 @@
 }
 
 .btn-primary, body #navbar .container ul .btn, #home .home-container .home-info .btn, #contact-section .container .contact-box .email-address .btn-class .btn {
-  background-image: -webkit-gradient(linear, left top, right top, from(#314755), color-stop(51%, #7188f9), to(#314755));
-  background-image: linear-gradient(to right, #314755 0%, #7188f9 51%, #314755 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#5991b4), color-stop(51%, #7188f9), to(#196696));
+  background-image: linear-gradient(to right, #5991b4 0%, #7188f9 51%, #196696 100%);
   font-size: 17px;
   font-weight: 500;
   padding: 17px 45px;

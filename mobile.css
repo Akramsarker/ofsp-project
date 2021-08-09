@@ -7,6 +7,9 @@
 }
 
 @media screen and (max-width: 900px) {
+  body #footer-section {
+    display: none;
+  }
   body #footer-section .container {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);

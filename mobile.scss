@@ -1,6 +1,5 @@
 // VARIABLE 
 @import 'variable';
-// @import "extend";
 
 // Ipad Pro
 @media screen and (max-width: 1200px) {
@@ -15,6 +14,7 @@
 @media screen and (max-width: 900px) {
   body {
     #footer-section {
+      display: none;
       .container {
         grid-template-columns: repeat(3, 1fr);
         align-self: center;
