@@ -9,7 +9,7 @@
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/testimonials/testimonials.css">
-  <link rel="stylesheet" href="/responsives/mobile.css">
+  <link rel="stylesheet" href="mobile.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,210 +20,203 @@
 
 <body>
   <!-- NAVBAR SECTION -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="logo">
-        <a href="#">English_Batayon</a>
+  <header id="landing">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-logo">
+          <a href="#home">English_Ba</a>
+        </div>
+        <ul class="nav_list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#company-section">Company</a></li>
+          <li><a href="#pricing-cards">Pricing</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+          <button class="btn">Login</button>
+        </ul>
       </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#company-section">Company</a></li>
-        <li><a href="#pricing-cards">Pricing</a></li>
-        <li><a href="#contact-section">Contact</a></li>
-        <button class="btn">Login</button>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- SHOWCASE SECTION -->
-  <section id="home">
-    <div class="home-container">
-      <div class="home-info">
-        <h1>Online English Learning</h1>
-        <p>From finding relevant media contacts to sending eye-catching press releases, Prowly has everything you need
-          your PR work done.</p>
-        <button class="btn">Join</button>
-      </div>
-      <div class="showcase-image">
-        <img src="/image/538.svg" alt="">
+    <!-- SHOWCASE SECTION -->
+    <div class="showcase">
+      <div class="showcase-item">
+        <div class="showcase-info">
+          <h1>Online English Learning</h1>
+          <p>From finding relevant media contacts to sending eye-catching press releases, Prowly has everything you need
+            your PR work done.</p>
+          <button class="btn">Join</button>
+        </div>
+        <div class="showcase-image">
+          <img src="/image/538.svg" alt="">
+        </div>
       </div>
     </div>
-  </section>
+  </header>
+
+
 
   <!-- Pricing Section -->
-  <section id="pricing-cards">
-    <h1>Join These Course</h1>
-    <div class="container">
-      <div class="card">
-        <img src="image/Course 1.jpg" alt="">
-        <h2>English Grammer Course</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
-          ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
-        <div class="card-container">
-          <div class="time-length">
-            <div class="para">
-              <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
+  <main>
+    <section id="pricing-cards">
+      <h1>Join These Course</h1>
+      <div class="container">
+        <div class="card-item">
+          <img src="image/Course 1.jpg" alt="">
+          <h2>English Grammer Course</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
+            ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
+          <div class="card-container">
+            <div class="time-length">
+              <div class="para">
+                <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
+              </div>
+            </div>
+            <div class="price">
+              <p>Free</p>
             </div>
           </div>
-          <div class="price">
-            <p>Free</p>
-          </div>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="image/Course 2.jpg" alt="">
-        <h2>Speaking in british accent</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
-          ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
-        <div class="card-container">
-          <div class="time-length">
-            <div class="para">
-              <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
+        <div class="card-item">
+          <img src="image/Course 2.jpg" alt="">
+          <h2>Speaking in british accent</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
+            ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
+          <div class="card-container">
+            <div class="time-length">
+              <div class="para">
+                <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
+              </div>
+            </div>
+            <div class="price">
+              <p>Free</p>
             </div>
           </div>
-          <div class="price">
-            <p>Free</p>
-          </div>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="image/Course 3.jpg" alt="">
-        <h2>Class 12th English full course</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
-          ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
-        <div class="card-container">
-          <div class="time-length">
-            <div class="para">
-              <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
+        <div class="card-item">
+          <img src="image/Course 3.jpg" alt="">
+          <h2>Class 12th English full course</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, porro ducimus? Aut vitae aliquid sapiente
+            ipsam voluptas ex deleniti eaque id numquam labore, officia, praesentium beatae!</p>
+          <div class="card-container">
+            <div class="time-length">
+              <div class="para">
+                <p><span><i class="far fa-clock"></i></span>&nbsp; 4h 25min</p>
+              </div>
+            </div>
+            <div class="price">
+              <p>Free</p>
             </div>
           </div>
-          <div class="price">
-            <p>Free</p>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Company Section -->
-  <section id="company-section">
+    <!-- Company Section -->
+    <section id="company-section">
+      <div class="container">
+        <div class="company-item">
+          <div class="company-info">
+            <h1>Take Self Assesment</h1>
+            <p>From finding relevant media contacts to sending eye-catching visual press releases, Prowly has
+              everything you need your PR work done</p>
+          </div>
+          <div class="company-image">
+            <img src="image/Group 6.svg" alt="">
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="company-image">
+            <img src="image/Group 7.svg" alt="">
+          </div>
+          <div class="company-info">
+            <h1>Take Writen Text</h1>
+            <p>From finding relevant media contacts to sending eye-catching visual press releases, Prowly
+              has everything you need your PR work done</p>
+          </div>
+        </div>
+        <div class="company-item">
+          <div class="company-info">
+            <h1>Join Live Class</h1>
+            <p>From finding relevant media contacts to sending eye-catching visual press releases,
+              Prowly has everything you need your PR work done</p>
+          </div>
+          <div class="company-image">
+            <img src="image/Group 2.svg" alt="">
+          </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
     <div class="container">
-      <div class="company-item">
-        <div class="company-info">
-          <h1>Take Self Assesment</h1>
-          <p>From finding relevant media contacts to sending eye-catching visual press releases, Prowly has
-            everything you need your PR work done</p>
-        </div>
-        <div class="company-image">
-          <img src="image/Group 6.svg" alt="">
-        </div>
-      </div>
-
-
-      <div class="company-item">
-        <div class="company-image">
-          <img src="image/Group 7.svg" alt="">
-        </div>
-        <div class="company-info">
-          <h1>Take Writen Text</h1>
-          <p>From finding relevant media contacts to sending eye-catching visual press releases, Prowly
-            has everything you need your PR work done</p>
-        </div>
-      </div>
-      <div class="company-item">
-        <div class="company-info">
-          <h1>Join Live Class</h1>
-          <p>From finding relevant media contacts to sending eye-catching visual press releases,
-            Prowly has everything you need your PR work done</p>
-        </div>
-        <div class="company-image">
-          <img src="image/Group 2.svg" alt="">
-        </div>
-      </div>
-  </section>
-
-
-  <!-- texte -->
-<div class="container">
-  <section id="testim" class="testim">
-    <div class="wrap">
-      <h1>What Other Say</h1>
-      <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
-      <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
-      <ul id="testim-dots" class="dots">
-        <li class="dot active"></li>
-
-        <li class="dot"></li>
-
-        <li class="dot"></li>
-
-        <li class="dot"></li>
-
-        <li class="dot"></li>
-      </ul>
-      <div id="testim-content" class="cont">
-
-        <div class="active">
-          <div class="img"><img src="/image/Course 3.jpg" alt=""></div>
-          <h2>Lorem P. Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-
-        <div>
-          <div class="img"><img src="/image/Course 1.jpg" alt=""></div>
-          <h2>Mr. Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-
-        <div>
-          <div class="img"><img src="/image/Course 2.jpg" alt=""></div>
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-
-        <div>
-          <div class="img"><img src="/image/Course 1.jpg" alt=""></div>
-          <h2>Lorem De Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-
-        <div>
-          <div class="img"><img src="/image/Course 3.jpg" alt=""></div>
-          <h2>Mr. Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
- 
-
-
-  <!-- Contact Section -->
-  <section id="contact-section">
-    <div class="container">
-      <div class="contact-box">
-        <h1>Do you Have any questions</h1>
-        <p>Put your email address and get started</p>
-        <div class="email-address">
-          <div class="input-field">
-            <i class="fas fa-phone"></i>
-            <input type="number" placeholder="Enter Your Number">
+      <section id="testim" class="testim">
+        <div class="wrap">
+          <h1>What Other Say</h1>
+          <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+          <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+          <ul id="testim-dots" class="dots">
+            <li class="dot active"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+          </ul>
+          <div id="testim-content" class="cont">
+            <div class="active">
+              <div class="img"><img src="/image/Course 3.jpg" alt=""></div>
+              <h2>Lorem P. Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div>
+              <div class="img"><img src="/image/Course 1.jpg" alt=""></div>
+              <h2>Mr. Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div>
+              <div class="img"><img src="/image/Course 2.jpg" alt=""></div>
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div>
+              <div class="img"><img src="/image/Course 1.jpg" alt=""></div>
+              <h2>Lorem De Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div>
+              <div class="img"><img src="/image/Course 3.jpg" alt=""></div>
+              <h2>Mr. Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
           </div>
-          <div class="btn-class">
-            <button class="btn">Send</button>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <h1>Do you Have any questions</h1>
+          <p>Put your email address and get started</p>
+          <div class="number">
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input type="number" placeholder="Enter Your Number">
+            </div>
+            <div class="btn-send">
+              <button class="btn">Send</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- FOOTER SECTION -->
   <footer>
@@ -289,6 +282,7 @@
         </div>
       </div>
 
+      <!-- Footer Button -->
       <div class="footer-buttom">
         <div class="list-items">
           <div class="item">
@@ -309,8 +303,7 @@
   </footer>
 
 
-  <!-- script -->
-
+  <!-- script Src-->
   <script src="/js/testimonials.js"></script>
 </body>
 

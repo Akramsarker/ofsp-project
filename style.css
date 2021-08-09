@@ -1,15 +1,15 @@
-.main-container, body #navbar .container, #home .home-container, #pricing-cards .container, #company-section .container, #footer-section .container, #footer-section .footer-buttom {
+.main-container, body #landing, body #landing .navbar .container, body main #pricing-cards .container, body main #company-section .container, #footer-section .container, #footer-section .footer-buttom {
   max-width: 1200px;
   margin: auto;
 }
 
-.logo-style, body #navbar .container .logo a, #footer-section .container .footer-logo h1 {
+.logo-style, body #landing .navbar .container .nav-logo a, body #landing .navbar .container .nav-logo .nav_list li a, body #landing .navbar .container .nav_list li .nav-logo a, #footer-section .container .footer-logo h1 {
   font-size: 28px;
   font-weight: 800;
   color: #16171a;
 }
 
-.btn-primary, body #navbar .container ul .btn, #home .home-container .home-info .btn, #contact-section .container .contact-box .email-address .btn-class .btn {
+.btn-primary, body #landing .navbar .container .nav_list .btn, body #landing .showcase .showcase-item .showcase-info .btn, body main #contact-section .container .contact-box .btn-send .btn {
   background-image: -webkit-gradient(linear, left top, right top, from(#5991b4), color-stop(51%, #7188f9), to(#196696));
   background-image: linear-gradient(to right, #5991b4 0%, #7188f9 51%, #196696 100%);
   font-size: 17px;
@@ -29,12 +29,12 @@
   transition: .4s;
 }
 
-.btn-primary:hover, body #navbar .container ul .btn:hover, #home .home-container .home-info .btn:hover, #contact-section .container .contact-box .email-address .btn-class .btn:hover {
+.btn-primary:hover, body #landing .navbar .container .nav_list .btn:hover, body #landing .showcase .showcase-item .showcase-info .btn:hover, body main #contact-section .container .contact-box .btn-send .btn:hover {
   background-position: right center;
   background-color: #7386e4;
 }
 
-.grid, body #navbar .container, #company-section .container .company-item {
+.grid, body #landing .navbar .container, body main #company-section .container .company-item {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -47,7 +47,7 @@
           align-items: center;
 }
 
-.flex, #contact-section .container, #footer-section .container .footer-info .icons-items .icon-bg {
+.flex, body main #contact-section .container, #footer-section .container .footer-info .icons-items .icon-bg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,6 +59,10 @@
           align-items: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -67,34 +71,31 @@
   font-family: "Montserrat", sans-serif;
 }
 
-a, body #navbar .container ul li a {
+a, body #landing .navbar .container .nav_list li a {
   color: #83868b;
   text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 li {
   list-style: none;
 }
 
-a, body #navbar .container ul li a {
-  outline: none;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-body #navbar {
+body #landing .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #ffffff;
+  z-index: 99999999;
 }
 
-body #navbar .container {
-  padding: 15px 0 15px 15px;
+body #landing .navbar .container {
+  padding: 25px 0 0 0;
 }
 
-body #navbar .container ul {
+body #landing .navbar .container .nav_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,21 +107,21 @@ body #navbar .container ul {
           align-items: center;
 }
 
-body #navbar .container ul li a {
+body #landing .navbar .container .nav_list li a {
   font-size: 17px;
   font-weight: 400;
   padding: 10px;
 }
 
-body #navbar .container ul li a:hover {
+body #landing .navbar .container .nav_list li a:hover {
   color: #16171a;
 }
 
-body #navbar .container ul .btn {
-  padding: 15px 31px;
+body #landing .navbar .container .nav_list .btn {
+  padding: 15px 31px !important;
 }
 
-#home .home-container {
+body #landing .showcase .showcase-item {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1.3fr;
@@ -132,14 +133,14 @@ body #navbar .container ul .btn {
   height: 100vh;
 }
 
-#home .home-container .home-info h1 {
+body #landing .showcase .showcase-item .showcase-info h1 {
   color: #16171a;
   font-size: 2.7rem;
   font-weight: 700;
   margin-bottom: 2rem;
 }
 
-#home .home-container .home-info p {
+body #landing .showcase .showcase-item .showcase-info p {
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 400;
@@ -147,18 +148,18 @@ body #navbar .container ul .btn {
   color: #4e5259;
 }
 
-#home .home-container .showcase-image img {
+body #landing .showcase .showcase-item .showcase-image img {
   width: 100%;
 }
 
-#pricing-cards h1 {
+body main #pricing-cards h1 {
   color: #16171a;
-  font-size: 2.50rem;
+  font-size: 2.2rem;
   text-align: center;
   margin: 1rem 0 3rem 0;
 }
 
-#pricing-cards .container {
+body main #pricing-cards .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -166,7 +167,7 @@ body #navbar .container ul .btn {
   grid-gap: 30px;
 }
 
-#pricing-cards .container .card {
+body main #pricing-cards .container .card-item {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -174,29 +175,29 @@ body #navbar .container ul .btn {
   transition: .3s;
 }
 
-#pricing-cards .container .card:hover {
+body main #pricing-cards .container .card-item:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-#pricing-cards .container .card img {
+body main #pricing-cards .container .card-item img {
   width: 100%;
 }
 
-#pricing-cards .container .card h2 {
+body main #pricing-cards .container .card-item h2 {
   padding: 25px 20px 10px 20px;
   font-size: 1.2rem;
   color: #16171a;
 }
 
-#pricing-cards .container .card p {
+body main #pricing-cards .container .card-item p {
   padding: 10px 20px 0 20px;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #4e5259;
 }
 
-#pricing-cards .container .card .card-container {
+body main #pricing-cards .container .card-item .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,65 +210,65 @@ body #navbar .container ul .btn {
   padding: 20px;
 }
 
-#pricing-cards .container .card .card-container .time-length .para p {
+body main #pricing-cards .container .card-item .card-container .time-length .para p {
   padding: 0 !important;
   color: #4e5259;
   font-size: 15px;
 }
 
-#pricing-cards .container .card .card-container .time-length .para p i {
+body main #pricing-cards .container .card-item .card-container .time-length .para p i {
   color: #666666;
   font-size: 1rem;
 }
 
-#pricing-cards .container .card .card-container .price p {
+body main #pricing-cards .container .card-item .card-container .price p {
   padding: 0 !important;
   font-size: 15px;
   font-weight: 800;
   color: #4e5259;
 }
 
-#company-section {
+body main #company-section {
   margin-top: 8%;
 }
 
-#company-section .container .company-item {
+body main #company-section .container .company-item {
   grid-gap: 5rem;
 }
 
-#company-section .container .company-item .company-info h1 {
+body main #company-section .container .company-item .company-info h1 {
   color: #16171a;
   font-size: 2.2rem;
   margin-bottom: 3rem;
   font-weight: bold;
 }
 
-#company-section .container .company-item .company-info p {
+body main #company-section .container .company-item .company-info p {
   color: #4e5259;
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
 
-#company-section .container .company-item .company-image img {
+body main #company-section .container .company-item .company-image img {
   width: 100%;
   height: 550px;
 }
 
-#contact-section {
+body main #contact-section {
   background: #f4f5f6;
   margin: 5rem 0 10rem 0;
 }
 
-#contact-section .container {
+body main #contact-section .container {
   height: 40vh;
 }
 
-#contact-section .container .contact-box h1 {
+body main #contact-section .container .contact-box h1 {
   color: #16171a;
   font-size: 2.4rem;
 }
 
-#contact-section .container .contact-box p {
+body main #contact-section .container .contact-box p {
   color: #4e5259;
   font-size: 1.2rem;
   text-align: center;
@@ -275,7 +276,7 @@ body #navbar .container ul .btn {
   padding-bottom: 3rem;
 }
 
-#contact-section .container .contact-box .email-address {
+body main #contact-section .container .contact-box .number {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr auto;
@@ -283,7 +284,7 @@ body #navbar .container ul .btn {
   grid-gap: 15px;
 }
 
-#contact-section .container .contact-box .email-address .input-field i {
+body main #contact-section .container .contact-box .number .input-field i {
   position: absolute;
   margin-top: 1.2rem;
   font-size: 1rem;
@@ -291,7 +292,7 @@ body #navbar .container ul .btn {
   color: #c3c3c3;
 }
 
-#contact-section .container .contact-box .email-address .input-field input {
+body main #contact-section .container .contact-box .number .input-field input {
   width: 100%;
   padding: 20px 55px;
   background: white;
@@ -300,24 +301,29 @@ body #navbar .container ul .btn {
   outline: none;
 }
 
-#contact-section .container .contact-box .email-address .input-field input::-webkit-input-placeholder {
+body main #contact-section .container .contact-box .number .input-field::-webkit-input-placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-#contact-section .container .contact-box .email-address .input-field input:-ms-input-placeholder {
+body main #contact-section .container .contact-box .number .input-field:-ms-input-placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-#contact-section .container .contact-box .email-address .input-field input::-ms-input-placeholder {
+body main #contact-section .container .contact-box .number .input-field::-ms-input-placeholder {
   color: #707070;
   font-size: .9rem;
 }
 
-#contact-section .container .contact-box .email-address .input-field input::placeholder {
+body main #contact-section .container .contact-box .number .input-field::placeholder {
   color: #707070;
   font-size: .9rem;
+}
+
+body main #contact-section .container .contact-box .number .input-field input::-webkit-outer-spin-button,
+body main #contact-section .container .contact-box .number .input-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 #footer-section .container {
@@ -339,16 +345,7 @@ body #navbar .container ul .btn {
   color: #83868b;
 }
 
-#footer-section .container .footer-logo a, #footer-section body #navbar .container .footer-logo ul li a, body #navbar #footer-section .container .footer-logo ul li a, #footer-section body #navbar .container ul li .footer-logo a, body #navbar #footer-section .container ul li .footer-logo a {
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-#footer-section .container .footer-logo a:hover {
-  color: #000000;
-}
-
-#footer-section .container .footer-logo a i {
+#footer-section .container .footer-logo i {
   color: #83868b;
 }
 
@@ -364,13 +361,13 @@ body #navbar .container ul .btn {
   margin-bottom: 20px;
 }
 
-#footer-section .container .footer-info li a {
+#footer-section .container .footer-info li a, #footer-section body #landing .navbar .container .footer-info .nav_list li a, body #landing .navbar #footer-section .container .footer-info .nav_list li a, #footer-section body #landing .navbar .container .nav_list .footer-info li a, body #landing .navbar #footer-section .container .nav_list .footer-info li a {
   color: #83868b;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-#footer-section .container .footer-info li a:hover {
+#footer-section .container .footer-info li a:hover, #footer-section body #landing .navbar .container .footer-info .nav_list li a:hover, body #landing .navbar #footer-section .container .footer-info .nav_list li a:hover, #footer-section body #landing .navbar .container .nav_list .footer-info li a:hover, body #landing .navbar #footer-section .container .nav_list .footer-info li a:hover {
   color: #3f3c3c;
   text-decoration: underline;
 }
@@ -381,9 +378,7 @@ body #navbar .container ul .btn {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -448,10 +443,10 @@ body #navbar .container ul .btn {
 }
 
 #footer-section .footer-buttom .list-items .item:nth-child(3) {
-  margin-right: 0px;
+  margin-right: auto;
 }
 
-#footer-section .footer-buttom .list-items .item li a {
+#footer-section .footer-buttom .list-items .item li a, #footer-section .footer-buttom .list-items .item body #landing .navbar .container .nav_list li a, body #landing .navbar .container .nav_list #footer-section .footer-buttom .list-items .item li a {
   font-size: 0.8rem;
   color: #4e5259;
   -webkit-transition: .3s;

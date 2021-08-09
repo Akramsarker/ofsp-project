@@ -5,6 +5,10 @@
 // extend 
 @import 'extend';
 
+html{
+  scroll-behavior: smooth;
+}
+
 // Reset 
 * {
   padding: 0;
@@ -16,280 +20,289 @@
 a {
   color: $a-text-color;
   text-decoration: none;
+  transition: .3s;
 }
 
 li {
   list-style: none;
 }
 
-a {
-  outline: none;
-  transition: .3s;
-}
 
 // Navbar 
 body {
-  #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $nav-background-color;
+  #landing {
+    @extend .main-container;
 
-    .container {
-      @extend .grid;
-      @extend .main-container;
-      padding: 15px 0 15px 15px;
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: $nav-background-color;
+      z-index: 99999999;
 
+      .container {
+        @extend .grid;
+        @extend .main-container;
+        padding: 25px 0 0 0;
 
-      .logo {
-        a {
-          @extend .logo-style;
-        }
-      }
-
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        li {
+        .nav-logo {
           a {
-            @extend a;
-            font-size: 17px;
-            font-weight: 400;
-            padding: 10px;
-
-            &:hover {
-              color: #16171a;
-            }
+            @extend .logo-style;
           }
         }
 
-        .btn {
-          @extend .btn-primary;
-          padding: 15px 31px
-        }
+        .nav_list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-      }
-    }
-  }
-}
+          li {
+            a {
+              @extend a;
+              font-size: 17px;
+              font-weight: 400;
+              padding: 10px;
 
-// SHOWCASE 
-#home {
-  .home-container {
-    @extend .main-container;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    align-items: center;
-    grid-gap: 1rem;
-    height: 100vh;
-
-    .home-info {
-      h1 {
-        color: $main-heading-color;
-        font-size: 2.7rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-      }
-
-      p {
-        margin-bottom: 2rem;
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 2rem;
-        color: $main-paragraph-color;
-      }
-
-      .btn {
-        @extend .btn-primary;
-      }
-    }
-
-    .showcase-image {
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-// Pricing-Section
-#pricing-cards {
-  h1 {
-    color: $main-heading-color;
-    font-size: 2.50rem;
-    text-align: center;
-    margin: 1rem 0 3rem 0;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-    @extend .main-container;
-
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-      transition: .3s;
-
-      &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-      }
-
-      img {
-        width: 100%;
-      }
-
-      h2 {
-        padding: 25px 20px 10px 20px;
-        font-size: 1.2rem;
-        color: $main-heading-color;
-      }
-
-      p {
-        padding: 10px 20px 0 20px;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        color: $main-paragraph-color;
-      }
-
-      .card-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-
-        .time-length {
-          .para {
-            p {
-              padding: 0 !important;
-              color: $main-paragraph-color;
-              font-size: 15px;
-
-              i {
-                color: #666666;
-                font-size: 1rem;
+              &:hover {
+                color: #16171a;
               }
             }
           }
-        }
 
-        .price {
+          .btn {
+            @extend .btn-primary;
+            padding: 15px 31px !important;
+          }
+        }
+      }
+    }
+
+    // SHOWCASE 
+    .showcase {
+
+      .showcase-item {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        align-items: center;
+        grid-gap: 1rem;
+        height: 100vh;
+
+        .showcase-info {
+          h1 {
+            color: $main-heading-color;
+            font-size: 2.7rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+          }
+
           p {
-            padding: 0 !important;
-            font-size: 15px;
-            font-weight: 800;
+            margin-bottom: 2rem;
+            font-size: $main-p-font-size;
+            font-weight: 400;
+            line-height: 2rem;
             color: $main-paragraph-color;
           }
-        }
-      }
-    }
-  }
-}
 
-// Company Section
-#company-section {
-  margin-top: 8%;
-
-  .container {
-    @extend .main-container;
-
-    .company-item {
-      @extend .grid;
-      grid-gap: 5rem;
-
-      .company-info {
-        h1 {
-          color: $main-heading-color;
-          font-size: $main-font-size;
-          margin-bottom: 3rem;
-          font-weight: bold;
-        }
-
-        p {
-          color: $main-paragraph-color;
-          font-size: $main-p-font-size;
-          line-height: 1.8rem;
-        }
-      }
-
-      .company-image {
-        img {
-          width: 100%;
-          height: 550px;
-        }
-      }
-    }
-  }
-}
-
-// term
-
-#contact-section {
-  background: #f4f5f6;
-  margin: 5rem 0 10rem 0;
-
-  .container {
-    @extend .flex;
-    height: 40vh;
-
-    .contact-box {
-      h1 {
-        color: $main-heading-color;
-        font-size: 2.4rem;
-      }
-
-      p {
-        color: $main-paragraph-color;
-        font-size: $main-p-font-size;
-        text-align: center;
-        padding-top: 1.8rem;
-        padding-bottom: 3rem;
-      }
-
-      .email-address {
-        display: grid;
-        grid-template-columns: 3fr auto;
-        grid-gap: 15px;
-
-        .input-field {
-          i {
-            position: absolute;
-            margin-top: 1.2rem;
-            font-size: 1rem;
-            padding-left: 1.5rem;
-            color: #c3c3c3;
-          }
-
-          input {
-            width: 100%;
-            padding: 20px 55px;
-            background: rgb(255, 255, 255);
-            border: none;
-            border-radius: 7px;
-            outline: none;
-
-            &::placeholder {
-              color: #707070;
-              font-size: .9rem;
-            }
-          }
-        }
-
-        .btn-class {
           .btn {
             @extend .btn-primary;
           }
         }
+
+        .showcase-image {
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }
+
+  // Pricing-Section
+  main {
+    #pricing-cards {
+      h1 {
+        color: $main-heading-color;
+        font-size: $main-font-size;
+        text-align: center;
+        margin: 1rem 0 3rem 0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        @extend .main-container;
+
+        .card-item {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+          transition: .3s;
+
+          &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          }
+
+          img {
+            width: 100%;
+          }
+
+          h2 {
+            padding: 25px 20px 10px 20px;
+            font-size: 1.2rem;
+            color: $main-heading-color;
+          }
+
+          p {
+            padding: 10px 20px 0 20px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $main-paragraph-color;
+          }
+
+          .card-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            .time-length {
+              .para {
+                p {
+                  padding: 0 !important;
+                  color: $main-paragraph-color;
+                  font-size: 15px;
+
+                  i {
+                    color: #666666;
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+
+            .price {
+              p {
+                padding: 0 !important;
+                font-size: 15px;
+                font-weight: 800;
+                color: $main-paragraph-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Company Section
+    #company-section {
+      margin-top: 8%;
+
+      .container {
+        @extend .main-container;
+
+        .company-item {
+          @extend .grid;
+          grid-gap: 5rem;
+
+          .company-info {
+            h1 {
+              color: $main-heading-color;
+              font-size: $main-font-size;
+              margin-bottom: 3rem;
+              font-weight: bold;
+            }
+
+            p {
+              color: $main-paragraph-color;
+              font-size: $main-p-font-size;
+              line-height: 1.8rem;
+            }
+          }
+
+          .company-image {
+            img {
+              width: 100%;
+              height: 550px;
+            }
+          }
+        }
+      }
+    }
+
+
+    // Contact Sction
+    #contact-section {
+      background: #f4f5f6;
+      margin: 5rem 0 10rem 0;
+
+      .container {
+        @extend .flex;
+        height: 40vh;
+
+        .contact-box {
+          h1 {
+            color: $main-heading-color;
+            font-size: 2.4rem;
+          }
+
+          p {
+            color: $main-paragraph-color;
+            font-size: $main-p-font-size;
+            text-align: center;
+            padding-top: 1.8rem;
+            padding-bottom: 3rem;
+          }
+
+          .number {
+            display: grid;
+            grid-template-columns: 3fr auto;
+            grid-gap: 15px;
+
+            .input-field {
+              i {
+                position: absolute;
+                margin-top: 1.2rem;
+                font-size: 1rem;
+                padding-left: 1.5rem;
+                color: #c3c3c3;
+              }
+
+              input {
+                width: 100%;
+                padding: 20px 55px;
+                background: rgb(255, 255, 255);
+                border: none;
+                border-radius: 7px;
+                outline: none;
+              }
+
+              &::placeholder {
+                color: #707070;
+                font-size: .9rem;
+              }
+
+              input::-webkit-outer-spin-button,
+              input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+              }
+            }
+
+          }
+
+          .btn-send {
+            .btn {
+              @extend .btn-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
-
+// Footer Section
 #footer-section {
   .container {
     @extend .main-container;
@@ -310,16 +323,8 @@ body {
         color: $a-text-color;
       }
 
-      a {
-        transition: .3s;
-
-        &:hover {
-          color: #000000;
-        }
-
-        i {
-          color: $a-text-color;
-        }
+      i {
+        color: $a-text-color;
       }
     }
 
@@ -350,13 +355,13 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 10px;
-        justify-content: center;
+        justify-items: center;
         align-items: center;
 
         .icon-bg {
+          @extend .flex;
           height: 50px;
           width: 50px;
-          @extend .flex;
           border-radius: 50%;
           background-color: #fff;
           border: 2px solid #eaebed;
@@ -431,7 +436,7 @@ body {
         margin-right: 20px;
 
         &:nth-child(3) {
-          margin-right: 0px;
+          margin-right: auto;
         }
 
         li {

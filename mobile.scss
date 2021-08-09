@@ -2,110 +2,144 @@
 @import 'variable';
 
 // Ipad Pro
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   body {
     max-width: 100%;
     margin: auto;
     padding: 0 12px 0 12px;
-  }
-}
 
-// Ipad Pro
-@media screen and (max-width: 900px) {
-  body {
-    #footer-section {
-      display: none;
-      .container {
-        grid-template-columns: repeat(3, 1fr);
-        align-self: center;
-        align-content: center;
+    #landing {
+      max-width: 100%;
+      margin: auto;
+
+      .navbar {
+        padding: 0 15px 0 15px;
       }
     }
-  }
-}
 
-
-// Ipad Pro
-@media screen and (max-width: 750px) {
-  body {
-    #home {
-      .home-container {
-        grid-template-columns: 1fr;
+    #footer-section {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
         text-align: center;
-      }
-    }
-
-    #pricing-cards {
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    #company-section {
-      .container {
-        .company-item {
-          grid-template-columns: 1fr;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
-
-    #footer-section {
-      .container {
-        grid-template-columns: repeat(3, 1fr);
-        align-self: center;
-        align-content: center;
+        grid-row-gap: 5rem;
       }
     }
   }
 }
 
 // Ipad Pro
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 1000px) {
   body {
-    #navbar {
-      .container {
-        grid-template-columns: unset;
-        .logo{
+    #landing {
+      .showcase {
+        .showcase-item {
+          grid-template-columns: 1fr;
+          grid-gap: none;
+          height: 100vh;
           text-align: center;
-          margin-bottom: 2rem;
-        }
-        ul{
-          a{
-            padding: 0 0 15px 0;
+
+          .showcase-info {
+            margin-top: 3rem;
+
+            .btn {
+              display: inline-block;
+              margin: auto;
+            }
           }
-         
         }
       }
     }
+
+    main {
+      #pricing-cards {
+        margin-bottom: 7rem;
+
+        .container {
+          grid-template-columns: 1fr;
+
+          .card-item {
+            box-shadow: unset;
+          }
+        }
+      }
+
+      #company-section {
+        .container {
+          .company-item {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+        }
+      }
+    }
+
     #footer-section {
       .container {
         grid-template-columns: repeat(2, 1fr);
-        text-align: center;
-        .footer-info:nth-child(5) {
-         align-content: center;
-         align-self: center;
-        }
-      }
-      .footer-buttom{
-        padding: 3rem 0 2rem 0;
-        flex-direction: column;
-        .list-items{
-          margin-bottom: 3rem;
+
+        .footer-info:last-child {
+          grid-column: 1 / -1;
+
+          h2 {
+            padding-bottom: 3rem;
+          }
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 465px) {
+
+// // Ipad Pro
+@media screen and (max-width: 750px) {
   body {
+    main {
+      #contact-section {
+        .container {
+          .contact-box {
+            h1 {
+              text-align: center;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+
     #footer-section {
       .container {
         grid-template-columns: 1fr;
       }
     }
+
+    .footer-buttom {
+      flex-direction: column;
+
+      .list-items {
+        margin-bottom: 2.5rem;
+      }
+    }
+
   }
 }
 
+@media screen and (max-width: 450px) {
+  body {
+    main {
+      #contact-section {
+        .container {
+          .contact-box {
+            .number {
+              grid-template-columns: 1fr;
+            }
+
+            .btn-send {
+              display: inline-block;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
