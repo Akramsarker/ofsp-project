@@ -39,7 +39,7 @@ body {
       left: 0;
       width: 100%;
       background-color: $nav-background-color;
-      z-index: 99999999;
+      z-index: 9;
 
       .container {
         @extend .grid;
@@ -72,7 +72,9 @@ body {
 
           .btn {
             @extend .btn-primary;
-            padding: 15px 31px !important;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 300;
           }
         }
       }
@@ -260,11 +262,11 @@ body {
             grid-gap: 15px;
 
             .input-field {
-              i {
+              .material-icons {
                 position: absolute;
-                margin-top: 1.2rem;
-                font-size: 1rem;
-                padding-left: 1.5rem;
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                padding-left: 1.3rem;
                 color: #c3c3c3;
               }
 

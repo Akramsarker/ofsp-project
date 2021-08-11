@@ -68,6 +68,10 @@
           .company-item {
             grid-template-columns: 1fr;
             text-align: center;
+
+            &:nth-child(2) {
+              margin-bottom: 5rem;
+            }
           }
         }
       }

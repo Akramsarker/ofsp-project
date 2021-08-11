@@ -50,6 +50,9 @@
         grid-template-columns: 1fr;
     text-align: center;
   }
+  body main #company-section .container .company-item:nth-child(2) {
+    margin-bottom: 5rem;
+  }
   body #footer-section .container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);

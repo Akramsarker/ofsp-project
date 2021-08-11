@@ -88,7 +88,7 @@ body #landing .navbar {
   left: 0;
   width: 100%;
   background-color: #ffffff;
-  z-index: 99999999;
+  z-index: 9;
 }
 
 body #landing .navbar .container {
@@ -118,7 +118,9 @@ body #landing .navbar .container .nav_list li a:hover {
 }
 
 body #landing .navbar .container .nav_list .btn {
-  padding: 15px 31px !important;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 body #landing .showcase .showcase-item {
@@ -284,11 +286,11 @@ body main #contact-section .container .contact-box .number {
   grid-gap: 15px;
 }
 
-body main #contact-section .container .contact-box .number .input-field i {
+body main #contact-section .container .contact-box .number .input-field .material-icons {
   position: absolute;
-  margin-top: 1.2rem;
-  font-size: 1rem;
-  padding-left: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding-left: 1.3rem;
   color: #c3c3c3;
 }
 
